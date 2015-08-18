@@ -5,8 +5,9 @@ Evemail to gmail uploader.
 
 Requirements:
 
-pip install evelink
-pip install google-api-python-client
+    pip install evelink
+
+    pip install google-api-python-client
 
 
 API key with mail, mail body, and mailing list. 3584
