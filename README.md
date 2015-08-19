@@ -29,3 +29,5 @@ once you have python downloaded, and the modules installed with pip (which may n
 * python uploader.py
 * The first time it runs, it'll open a browser and get you to select the account and accept the privileges for insertion. After that, it'll run on cached credentials
 * Then it should start inserting mail into your gmail account, under the eve label.
+
+This will upload everything the API hands it the first time, then on each subsequent run, it'll only update new mail into there.
