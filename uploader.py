@@ -101,6 +101,7 @@ def main():
     
     apiid=config.get('API','id')
     vcode=config.get('API','vcode')
+    charname=config.get('API','charname')
     highestID=config.getint('EVEMAIL','highestid')
     newHighest=highestID
     credentials = get_credentials()
@@ -114,13 +115,13 @@ def main():
         if label['name']==mailLabel:
             labelID=label['id']
     if labelID=='':
-        print 'No label with the right name. Set one up'
+        print 'No label with the right name. Set one up called '+mailLabel
         quit()
     
     
     eve = evelink.eve.EVE()
     api = evelink.api.API(api_key=(apiid, vcode))
-    id_response = eve.character_id_from_name("Steve Ronuken")
+    id_response = eve.character_id_from_name(charname)
     char = evelink.char.Char(char_id=id_response.result, api=api)
     evemails = char.messages()
     getMailList={}
